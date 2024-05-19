@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gibson+Semibold"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>ROI Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="nav-logo">
+      <div class="logo">
+        <div class="logo-box">
+          <img
+            src="https://www.my-websitedemo.com/wp-content/uploads/2024/02/ColourOrange-SizeDesktop.svg"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <nav class="nav">
+        <li class="nav-item">
+          <a href="#">
+            <div class="label">solutions</div>
+            <div class="fa fa-angle-down arrow"></div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <div class="label">company</div>
+            <div class="fa fa-angle-down arrow"></div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <div class="label">partners</div>
+            <div class="fa fa-angle-down arrow"></div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <div class="label">resources</div>
+            <div class="fa fa-angle-down arrow"></div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <div class="label">customers</div>
+            <div class="fa fa-angle-down arrow"></div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#">
+            <div class="label">contact</div>
+          </a>
+        </li>
+        <button class="nav-button">Book A Demo</button>
+
+        <div class="nav-bar-button" id="nav-bar-button">
+          <div class="items"></div>
+          <div class="items"></div>
+          <div class="items"></div>
+        </div>
+
+        <div class="mobile-nav" id="mobile-nav">
+          <ul class="item-box">
+            <li>
+              <div class="line"></div>
+            </li>
+
+            <li>
+              <div class="item">
+                <div class="label">Solutions</div>
+                <div class="fa fa-angle-down arrow open-button"></div>
+              </div>
+              <div class="details open-details">
+                <div class="details-content">
+                  <div class="content-item">
+                    <header>BY PRODUCT</header>
+                    <div class="items-content">
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">AP Automation</div>
+                      </div>
+
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">PO Pro</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <header>BY INDUSTRY</header>
+                    <div class="items-content">
+                      <ul class="item-box">
+                        <li class="item"><a href="#">Construction</a></li>
+                        <li class="item">
+                          <a href="#">Distribution & Wholesale</a>
+                        </li>
+                        <li class="item"><a href="#">Engineering</a></li>
+                        <li class="item"><a href="#">Healthcare</a></li>
+                        <li class="item"><a href="#">Hospitality</a></li>
+                        <li class="item">
+                          <a href="#">Information Technology</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <div class="items-content">
+                      <ul class="item-box">
+                        <li class="item"><a href="#">Construction</a></li>
+                        <li class="item">
+                          <a href="#">Distribution & Wholesale</a>
+                        </li>
+                        <li class="item"><a href="#">Engineering</a></li>
+                        <li class="item"><a href="#">Healthcare</a></li>
+                        <li class="item"><a href="#">Hospitality</a></li>
+                        <li class="item">
+                          <a href="#">Information Technology</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <div class="items-content unique-content">
+                      <div class="title">Don’t just take our  word for it!</div>
+
+                      <div class="demo-text">
+                        Hear what some of our customers have to say about
+                        SmartOffice
+                      </div>
+
+                      <div class="link-button">CUSTOMER STORIES</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="item">
+                <div class="label">Company</div>
+                <div class="fa fa-angle-down arrow open-button"></div>
+              </div>
+
+              <div class="details open-details">
+                <div class="details-content">
+                  <div class="content-item">
+                    <header>BY PRODUCT</header>
+                    <div class="items-content">
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">AP Automation</div>
+                      </div>
+
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">PO Pro</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <header>COMPANY</header>
+                    <div class="items-content">
+                      <ul class="item-box">
+                        <li class="item"><a href="#"> Our Story</a></li>
+                        <li class="item"><a href="#">Meet the Team</a></li>
+                        <li class="item"><a href="#">Careers</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <div class="items-content unique-content">
+                      <div class="title">Don’t just take our  word for it!</div>
+
+                      <div class="demo-text">
+                        Hear what some of our customers have to say about
+                        SmartOffice
+                      </div>
+
+                      <div class="link-button">CUSTOMER STORIES</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="item">
+                <div class="label">Partners</div>
+                <div class="fa fa-angle-down arrow open-button"></div>
+              </div>
+
+              <div class="details open-details">
+                <div class="details-content">
+                  <div class="content-item">
+                    <header>BY PRODUCT</header>
+                    <div class="items-content">
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">AP Automation</div>
+                      </div>
+
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">PO Pro</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <header>PARTNERS</header>
+                    <div class="items-content">
+                      <ul class="item-box">
+                        <li class="item">
+                          <a href="#">Technology Partners</a>
+                        </li>
+                        <li class="item">
+                          <a href="#">Content Management Companies</a>
+                        </li>
+                        <li class="item">
+                          <a href="#">Business Solution Resellers</a>
+                        </li>
+                        <li class="item">
+                          <a href="#"> Managed Print Services</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <div class="items-content unique-content">
+                      <div class="title">Don’t just take our  word for it!</div>
+
+                      <div class="demo-text">
+                        Hear what some of our customers have to say about
+                        SmartOffice
+                      </div>
+
+                      <div class="link-button">CUSTOMER STORIES</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="item">
+                <div class="label">Resources</div>
+                <div class="fa fa-angle-down arrow open-button"></div>
+              </div>
+
+              <div class="details open-details">
+                <div class="details-content">
+                  <div class="content-item">
+                    <header>BY PRODUCT</header>
+                    <div class="items-content">
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">AP Automation</div>
+                      </div>
+
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">PO Pro</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <header>RESOURCES</header>
+                    <div class="items-content">
+                      <ul class="item-box">
+                        <li class="item"><a href="#">FAQs</a></li>
+                        <li class="item"><a href="#">Blog</a></li>
+                        <li class="item"><a href="#">ROI Calculator</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <div class="items-content unique-content">
+                      <div class="title">Don’t just take our  word for it!</div>
+
+                      <div class="demo-text">
+                        Hear what some of our customers have to say about
+                        SmartOffice
+                      </div>
+
+                      <div class="link-button">CUSTOMER STORIES</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="item">
+                <div class="label">Customers</div>
+                <div class="fa fa-angle-down arrow open-button"></div>
+              </div>
+
+              <div class="details open-details">
+                <div class="details-content">
+                  <div class="content-item">
+                    <header>BY PRODUCT</header>
+                    <div class="items-content">
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">AP Automation</div>
+                      </div>
+
+                      <div class="button-content">
+                        <div class="icon">
+                          <div class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="30"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="text-content">PO Pro</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <header>CUSTOMERS</header>
+                    <div class="items-content">
+                      <ul class="item-box">
+                        <li class="item"><a href="#"> Accounts Payable</a></li>
+                        <li class="item"><a href="#">Accountants</a></li>
+                        <li class="item"><a href="#">Finance Teams</a></li>
+                        <li class="item"><a href="#"> Customer Stories</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="content-item">
+                    <div class="items-content unique-content">
+                      <div class="title">Don’t just take our  word for it!</div>
+
+                      <div class="demo-text">
+                        Hear what some of our customers have to say about
+                        SmartOffice
+                      </div>
+
+                      <div class="link-button">CUSTOMER STORIES</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="item bottom-line">
+                <div class="label">Contact</div>
+              </div>
+            </li>
+
+            <li>
+              <div class="mobile-button">Book A Demo</div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="content">
+      <div class="moudle_header">
+        <div class="bold-header">AP Automation ROI Calculator</div>
+        <div class="demo-text">
+          By implementing SmartOffice AP Automation, your business can save a
+          huge amount of time, money, and stress on invoice processing. Check
+          out below to see just how much you could save.
+        </div>
+      </div>
+
+      <div class="miter-content">
+        <div class="miter-box">
+          <div class="miter">
+            <div class="point-arrow" id="point-arrow">
+              <div class="arrow">
+                <img
+                  src="https://www.my-websitedemo.com/wp-content/plugins/roi-calculator/assets/img/pointer.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="image-indicator">
+              <img
+                class="miter-box-image"
+                src="https://www.my-websitedemo.com/wp-content/plugins/roi-calculator/assets/img/one.png"
+                alt=""
+              />
+              <img
+                class="miter-box-image"
+                src="https://www.my-websitedemo.com/wp-content/plugins/roi-calculator/assets/img/two.png"
+                alt=""
+              />
+              <img
+                class="miter-box-image"
+                src="https://www.my-websitedemo.com/wp-content/plugins/roi-calculator/assets/img/three.png"
+                alt=""
+              />
+              <img
+                class="miter-box-image"
+                src="https://www.my-websitedemo.com/wp-content/plugins/roi-calculator/assets/img/four.png"
+                alt=""
+              />
+              <img
+                class="miter-box-image"
+                src="https://www.my-websitedemo.com/wp-content/plugins/roi-calculator/assets/img/six.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="result">
+            <div class="result-label">Sanity Level</div>
+            <div class="reaction-word" id="reaction-word">Eh, Fine</div>
+
+            <div class="rating">
+              <div class="rate-label">Total Savings</div>
+              <div class="rate" id="reaction-rate">60.00%</div>
+            </div>
+          </div>
+        </div>
+        <h1 class="content-sub-h">Check your sanity</h1>
+
+        <div class="qus-ans">
+          <div class="qus">Do you create Purchase Orders?</div>
+          <div class="swt-box">
+            <div class="toggle">No</div>
+            <div class="label toggle-label">
+              <div class="item on">No</div>
+              <div class="item">Yes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qus-ans">
+          <div class="qus">Do you create Goods Receipt Notes?</div>
+          <div class="swt-box">
+            <div class="toggle">No</div>
+            <div class="label toggle-label">
+              <div class="item on">No</div>
+              <div class="item">Yes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qus-ans">
+          <div class="qus">
+            Do you have multiple approvers within the business?
+          </div>
+          <div class="swt-box">
+            <div class="toggle">No</div>
+            <div class="label toggle-label">
+              <div class="item on">No</div>
+              <div class="item">Yes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qus-ans">
+          <div class="qus">Do you have multiple locations?</div>
+          <div class="swt-box">
+            <div class="toggle">No</div>
+            <div class="label toggle-label">
+              <div class="item on">No</div>
+              <div class="item">Yes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qus-ans">
+          <div class="qus">Do you receive Supplier Statements?</div>
+          <div class="swt-box">
+            <div class="toggle">No</div>
+            <div class="label toggle-label">
+              <div class="item on">No</div>
+              <div class="item">Yes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-bar">
+          <div class="qus">How many invoices do you process a month?</div>
+          <div class="bar" id="progress-line">
+            <input
+              type="range"
+              name=""
+              id=""
+              class="circle"
+              min="0"
+              max="2000"
+              id="circle"
+            />
+          </div>
+        </div>
+
+        <div class="big-submit-button">GET FULL RESULT NOW</div>
+      </div>
+    </div>
+    <div class="demo-content">
+      <div class="image"></div>
+
+      <div class="content-text">
+        <div class="header">Stop wasting your time!</div>
+
+        <div class="context">
+          Say goodbye to tedious manual tasks and automate your file processing
+          with SmartOffice
+        </div>
+      </div>
+
+      <div class="button-box">
+        <div class="button">BOOK A DEMO</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="info">
+        <div class="info-items">
+          <div class="info-header">PRODUCT SOLUTIONS</div>
+          <div class="info-items">
+            <div class="button">
+              <div class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                  />
+                </svg>
+              </div>
+              <div class="text">AP Automation</div>
+            </div>
+            <div class="button">
+              <div class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm8.021 9.593c-.141-.427-.314-.844-.516-1.242l-2.454 1.106c.217.393.39.81.517 1.242l2.453-1.106zm-12.573-.904c.271-.354.58-.674.919-.957l-1.89-1.968c-.328.294-.637.615-.918.957l1.889 1.968zm1.715-1.514c.379-.221.781-.396 1.198-.523l-1.034-2.569c-.41.142-.812.318-1.198.524l1.034 2.568zm-2.759 3.616c.121-.435.288-.854.498-1.25l-2.47-1.067c-.197.403-.364.823-.498 1.25l2.47 1.067zm9.434-6.2c-.387-.205-.79-.379-1.2-.519l-1.024 2.573c.417.125.82.299 1.2.519l1.024-2.573zm2.601 2.13c-.282-.342-.59-.664-.918-.957l-1.89 1.968c.339.283.647.604.918.957l1.89-1.968zm-5.791-3.059c-.219-.017-.437-.026-.649-.026s-.431.009-.65.026v2.784c.216-.025.434-.038.65-.038.216 0 .434.013.649.038v-2.784zm-.648 13.782c-1.294 0-2.343-1.049-2.343-2.343 0-.883.489-1.652 1.21-2.051l1.133-5.31 1.133 5.309c.722.399 1.21 1.168 1.21 2.051 0 1.295-1.049 2.344-2.343 2.344z"
+                  />
+                </svg>
+              </div>
+              <div class="text">PO Pro</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-items">
+          <div class="info-header">INDUSTRY SOLUTIONS</div>
+          <div class="info-items">
+            <ul class="list-frame">
+              <li><a href="#">Construction</a></li>
+              <li><a href="#">Distribution & Wholesale</a></li>
+              <li><a href="#">Engineering</a></li>
+              <li><a href="#">Healthcare</a></li>
+              <li><a href="#">Hospitality</a></li>
+              <li><a href="#">Information Technology</a></li>
+              <li><a href="#">Manufacturing</a></li>
+              <li><a href="#">Non-Profit</a></li>
+              <li><a href="#">Professional Services</a></li>
+              <li><a href="#">Public Sector</a></li>
+              <li><a href="#">Retail</a></li>
+              <li><a href="#">Transport & Logistics</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-items">
+          <div class="info-header">COMPANY</div>
+          <div class="info-items">
+            <ul class="list-frame">
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Meet the Team</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-items">
+          <div class="info-header">RESOURCES</div>
+          <div class="info-items">
+            <ul class="list-frame">
+              <li><a href="#"> Case Studies</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-items">
+          <div class="info-header">CONTACT</div>
+          <div class="info-items">
+            <ul class="list-frame">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Book a Demo</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-items">
+          <div class="info-header">SMARTOFFICE</div>
+          <div class="info-items">
+            <ul class="list-frame">
+              <li><a href="#">T: +353 21 4855 700</a></li>
+              <li><a href="#">E: info@smartoffice.ie</a></li>
+
+              <div class="info-header">Smart Office HQ</div>
+
+              <li class="sub-item"><a href="#">Unit B 1A</a></li>
+              <li class="sub-item">
+                <a href="#">Fota Point Enterprise Park</a>
+              </li>
+              <li class="sub-item"><a href="#">Cobh Cross</a></li>
+              <li class="sub-item"><a href="#">Carrigtwohill</a></li>
+              <li class="sub-item"><a href="#">Co. Cork</a></li>
+              <li class="sub-item"><a href="#">T45 NX48</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-more-info">
+        <div class="logo">
+          <div class="image"></div>
+        </div>
+        <div class="more-info">
+          <div class="text-item">© SmartOffice</div>
+
+          <div class="text-item">Privacy Policy</div>
+
+          <div class="text-item">Cookie Policy</div>
+
+          <div class="icon-box">
+            <a href="#">
+              <div class="icon-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="white"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                  />
+                </svg>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="icon-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="white"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const qusAns = document.getElementsByClassName("swt-box");
+      const toggles = document.getElementsByClassName("toggle");
+      const togglesLabel = document.getElementsByClassName("toggle-label");
+      const pointer = document.getElementById("point-arrow");
+      const reactionWrod = document.getElementById("reaction-word");
+      const reactionRate = document.getElementById("reaction-rate");
+      const miterBoxImages = document.getElementsByClassName("miter-box-image");
+      const navButton = document.getElementById("nav-bar-button");
+      const navContent = document.getElementById("mobile-nav");
+      const navarrowToggle = document.getElementsByClassName("open-button");
+      const navdetails = document.getElementsByClassName("open-details");
+
+      let openNav = false;
+      //navButton
+      navContent.classList.add("unActive-mobile-nav");
+      navButton.addEventListener("click", () => {
+        if (openNav) {
+          openNav = false;
+          navContent.classList.remove("active-mobile-nav");
+          navContent.classList.add("unActive-mobile-nav");
+        } else {
+          navContent.classList.remove("unActive-mobile-nav");
+          navContent.classList.add("active-mobile-nav");
+          openNav = true;
+        }
+      });
+
+      const listofToggle = [];
+      for (let index = 0; index < navarrowToggle.length; index++) {
+        listofToggle.push(false);
+        navdetails[index].classList.add("unActive-details");
+        navarrowToggle[index].addEventListener("click", () => {
+          if (listofToggle[index]) {
+            listofToggle[index] = false;
+            navdetails[index].classList.add("unActive-details");
+            navdetails[index].classList.remove("active-details");
+            navdetails[index].classList.remove("active-other-details");
+          } else {
+            for (const iterator of navdetails) {
+              iterator.classList.add("unActive-details");
+              iterator.classList.remove("active-details");
+              iterator.classList.remove("active-other-details");
+            }
+
+            listofToggle[index] = true;
+
+            navdetails[index].classList.remove("unActive-details");
+
+            if (index == 0) {
+              navdetails[index].classList.add("active-details");
+            } else {
+              navdetails[index].classList.add("active-other-details");
+            }
+          }
+        });
+      }
+
+      // deg  provider
+      function getPointOfMiter(rate) {
+        const maxDeg = 180;
+        const minDeg = 0;
+        const singleRateOfDeg = maxDeg / 100;
+        return singleRateOfDeg * rate;
+      }
+      //rate provider
+      function getRateProvider(listOfMiterValue, currentAndOfValue) {
+        if (listOfMiterValue.length != currentAndOfValue.length) {
+          throw " 'initial list ' and 'current list' length mismatch";
+        }
+        let currentValue = 0;
+        let totalRate = 0;
+
+        for (let index = 0; index < listOfMiterValue.length; index++) {
+          totalRate += listOfMiterValue[index];
+          if (currentAndOfValue[index] == "Yes") {
+            currentValue += listOfMiterValue[index];
+          }
+        }
+        return {
+          rate: (currentValue / totalRate) * 100,
+          currentValue: currentValue,
+        };
+      }
+      // reaction word provider
+      function reactionWordProvider(value, startPoint) {
+        if (value + startPoint == startPoint) {
+          return "Eh, Fine!";
+        } else if (value + startPoint <= 8 + startPoint) {
+          return "What";
+        } else if (value + startPoint <= 13 + startPoint) {
+          return "Not good!";
+        } else if (value + startPoint <= 18 + startPoint) {
+          return "Agh";
+        } else if (value + startPoint <= 23 + startPoint) {
+          return "!@$%?";
+        }
+      }
+      //
+      //
+      //
+      //
+
+      // evert items value (qus)
+      const listOfMiterRate = [5, 5, 3, 5, 5];
+      const startPoint = 60;
+      const totalRate = 23; // miter start  -  end  distance
+
+      const ansValue = [];
+      for (let index = 0; index < qusAns.length; index++) {
+        ansValue.push(toggles[index].innerHTML);
+        qusAns[index].addEventListener("click", () => {
+          if (ansValue[index] == "No") {
+            ansValue[index] = "Yes";
+            toggles[index].innerHTML = ansValue[index];
+            toggles[index].style.left = "49%";
+            togglesLabel[index].style.backgroundColor = "#FF8500";
+            const getRateWithValue = getRateProvider(listOfMiterRate, ansValue);
+            pointer.style.transform = `rotate(${getPointOfMiter(
+              getRateWithValue.rate
+            )}deg)`;
+            reactionRate.innerHTML = `${
+              startPoint + getRateWithValue.currentValue
+            }.00%`;
+            reactionWrod.innerHTML = reactionWordProvider(
+              getRateWithValue.currentValue,
+              startPoint
+            );
+            for (const iterator of miterBoxImages) {
+              iterator.style.opacity = "0";
+            }
+            miterBoxImages[index].style.opacity = "1";
+          } else {
+            ansValue[index] = "No";
+            toggles[index].innerHTML = ansValue[index];
+            togglesLabel[index].style.backgroundColor = "#f0f1f3";
+            toggles[index].style.left = "0%";
+            const getRateWithValue = getRateProvider(listOfMiterRate, ansValue);
+            pointer.style.transform = `rotate(${getPointOfMiter(
+              getRateWithValue.rate
+            )}deg)`;
+            reactionRate.innerHTML = `${
+              startPoint + getRateWithValue.currentValue
+            }.00%`;
+            reactionWrod.innerHTML = reactionWordProvider(
+              getRateWithValue.currentValue,
+              startPoint
+            );
+            for (const iterator of miterBoxImages) {
+              iterator.style.opacity = "0";
+            }
+            miterBoxImages[index].style.opacity = "1";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
